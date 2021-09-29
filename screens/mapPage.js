@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View,Text, Dimensions, StyleSheet } from 'react-native';
+import {View,Text, Dimensions, StyleSheet, Image } from 'react-native';
 import MapView from 'react-native-maps';
 import { Actions } from 'react-native-router-flux';
 
@@ -20,12 +20,12 @@ class mapPage extends Component {
     this.state = {
         coordinates: [
           {
-            latitude:  36.993973,
-            longitude: 35.310351,
+            latitude: 36.991426,
+            longitude: 35.332977
           },
           {
-            latitude:36.993608,
-            longitude:35.311605,
+            latitude: 36.985062,
+            longitude: 35.330840
           },
           {
             latitude:36.993608,
@@ -63,7 +63,7 @@ onMapPress = (e) => {
           }}
           style={StyleSheet.absoluteFill}
           ref={c => this.mapView = c}
-          onPress={this.onMapPress}
+          // onPress={this.onMapPress}
         >
           {/* <Polyline 
           strokeColors={[
@@ -99,7 +99,13 @@ onMapPress = (e) => {
           ]}
           /> */}
           {this.state.coordinates.map((coordinate, index) =>
-            <MapView.Marker key={`coordinate_${index}`} coordinate={coordinate} />
+            <MapView.Marker key={`coordinate_${index}`} coordinate={coordinate}>
+              <Image
+                        style={styles.tinyLogo}
+                        source={require('../components/icons/mosque.png')}
+                       
+                    />
+            </MapView.Marker>
           )}
           {/* {(this.state.coordinates.length >= 2) && (
             <MapViewDirections
@@ -138,7 +144,10 @@ onMapPress = (e) => {
 
 const styles = StyleSheet.create({
   //if we need it 
-
+  tinyLogo:{
+    width:20,
+    height:20
+  }
 });
 
 
