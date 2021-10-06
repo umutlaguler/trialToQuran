@@ -9,7 +9,7 @@ import {
 import { SelectableText } from "@astrocoders/react-native-selectable-text";
  class mainPage extends Component{
    sureFull = [
-     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"
+     "Allahü lâ ilâhe illâ hüvel hayyül kayyûm, Lâ te’huzühû sinetün ve lâ nevm. Lehû mâ fis-semâvâti vemâ fil ard. Menzellezî yeşfeu indehû illâ biiznihi, ya’lemü mâ beyne eydîhim, vemâ halfehüm, velâ yühîtûne bişey’in min ilmihî, illâ bimâ şâe vesia kürsiyyühüssemâvâti vel ard, Velâ yeûdühü hıfzuhumâ ve hüvel aliyyül azîm."
    ]
     constructor(props) {
         super(props);
@@ -41,17 +41,17 @@ higlightText = () =>{
 }
 
 render(){
-  console.log("state", this.selectedTxt);
+
     return(
          <SafeAreaView style={{flex:1, justifyContent:'center', alignItems:'center'}}> 
          {
            this.higlightText()
          }
-         <TouchableOpacity 
+         {/* <TouchableOpacity 
           style = {{borderWidth:2}}
           onPress={() => this.props.navigation.navigate('mapPage')}>
             <Text>haritalara gider</Text>
-         </TouchableOpacity>
+         </TouchableOpacity> */}
           {/* <TouchableOpacity style = {styles.videoPageBtn}
             onPress={() => this.getText("Sed")}>
             <Text>ana sayfadan video sayfasına yönlendirme butonu </Text>

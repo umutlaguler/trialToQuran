@@ -27,7 +27,7 @@ import PhotoRenderItem from "../components/PhotoRenderItem";
                     renderItem={({item}) => <PhotoRenderItem item= {item} thisProps = {this.props}/>}
                     keyExtractor={item => item.id}
                 />
-                <Text>{this.props.route.params.content}</Text>
+                {/* <Text>{this.props.route.params.content}</Text> */}
                 
             </SafeAreaView>
         )
